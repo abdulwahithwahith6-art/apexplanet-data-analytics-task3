@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Recognition</h3>
+<div class="card p-3">
+  <p>Live video below — the server will mark attendance when it recognizes faces.</p>
+  <div class="text-center">
+    <img id="videoElem" src="{{ url_for('video_feed') }}" class="img-fluid" alt="Live feed" style="max-width:720px;">
+  </div>
+</div>
+{% endblock %}

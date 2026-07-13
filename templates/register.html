@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Register Student</h3>
+<div class="card p-3">
+  <form method="post" action="{{ url_for('register') }}">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label class="form-label">Student ID (SID)</label>
+        <input name="sid" class="form-control" required>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label class="form-label">Name</label>
+        <input name="name" class="form-control" required>
+      </div>
+      <div class="col-md-2 align-self-end mb-3">
+        <button class="btn btn-primary w-100" type="submit">Capture Faces</button>
+      </div>
+    </div>
+    <p class="text-muted">After submitting, a webcam window will open to capture face images. Press <strong>q</strong> to stop early.</p>
+  </form>
+</div>
+{% endblock %}
